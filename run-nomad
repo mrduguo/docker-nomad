@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ -n "$NOMAD_LOCAL_CONFIG" ]; then
+	echo "$NOMAD_LOCAL_CONFIG" > "/nomad_local.json"
+    /usr/local/bin/nomad "$@" -config=/nomad_local.json
+else
+	/usr/local/bin/nomad "$@"
+fi
