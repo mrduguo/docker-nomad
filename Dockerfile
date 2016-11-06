@@ -6,6 +6,7 @@ LABEL org.kurron.ide.name="Nomad" org.kurron.ide.version=0.4.1
 
 ADD https://releases.hashicorp.com/nomad/0.4.1/nomad_0.4.1_linux_amd64.zip /tmp/ide.zip
 ADD run-nomad /run-nomad
+ADD hello-world.hcl /hello-world.hcl
 
 RUN apt-get update && \
     apt-get install -y unzip ca-certificates && \
