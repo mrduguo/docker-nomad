@@ -26,4 +26,5 @@ VOLUME ["/var/run/docker.sock"]
 
 WORKDIR /pwd
 ENTRYPOINT ["/run-nomad"]
+
 CMD ["--version"]
